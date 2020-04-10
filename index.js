@@ -7,8 +7,11 @@ const server = express()
 const port = 4040
 
 server.get("/", (req, res) => {
-    res.status(200).send("main route working");
+    res.status(200).send("working");
 })
+
+server.use(express.json())
+server.use("/posts", postsRouter)
 
 // server.use(express.json())
 // server.use("/users", usersRouter)

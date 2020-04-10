@@ -77,7 +77,7 @@ router.post("/:id/comments", (req, res) => {
         res.status(400).json({
             errorMessage: "Please provide text for the comment.",
         })
-    } else if (!req.parmams.id) {
+    } else if (!req.params.id) {
         res.status(404).json({
             message: "The post with the specified ID does not exist.",
         })
